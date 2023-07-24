@@ -1,0 +1,324 @@
+/*GENERAL*/
+
+body {
+	margin: 0;
+}
+
+p {
+	color: white;
+	font-family: Dancing Script, Arial;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/*HEADER*/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #121212;
+	height: 85px;
+	z-index: 100;
+
+	
+
+	font-size: 25px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+header a {
+	color: white;
+	font-family: Dancing Script, Arial;
+}
+
+.nameImg {
+	margin: 0 40px;
+	height: 85px;
+}
+
+.nameImg img{
+	height: 85px;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin: 0 12px;
+}
+
+li:hover p{
+	transform: scale(1.25);
+	color: #Fb4526;
+	transition: 0.15s;
+}
+
+@media (max-width: 650px) {
+	.nameImg {
+		margin: 0 5px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	li {
+		margin: 0 5px;
+	}
+
+	.nameImg {
+		margin: 0 3px;
+	}
+
+	li:hover p{
+		transform: scale(1.0);
+		color: #Fb4526;
+		transition: 0.15s;
+	}
+}
+
+@media (max-width: 470px) {
+	.nameImg {
+		margin: 0;
+	}
+
+	li {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 410px) {
+	.nameImg {
+		margin: 0;
+	}
+
+	li {
+		font-size: 18px;
+		margin: 0 3px;
+	}
+}
+
+
+/*MAIN*/
+
+main {
+	padding-top: 85px;
+}
+
+.highlights {
+	background-color: #404040;
+	height: fit-content;
+}
+
+.highlightsTittle {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.highlightsTittle p {
+	padding-top: 10px;
+	font-family: Caveat, Arial;
+	font-size: 30px;
+	line-height: 0;
+	font-weight: 600;
+}
+
+.pictures {
+	display: grid;
+	padding: 30px 60px 15px 60px;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 50px;
+	row-gap: 50px;
+}
+
+.highlights img {
+	width: 100%;
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.pictures img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+@media (max-width: 1000px) {
+	.pictures{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 900px) {
+	.pictures {
+		grid-gap: 30px;
+		padding: 30px 40px 15px 40px;
+	}
+}
+
+@media (max-width: 650px) {
+	.pictures {
+		grid-gap: 15px;
+		padding: 20px 30px 10px 30px;
+	}
+}
+
+@media (max-width: 550px) {
+	.pictures{
+		grid-template-columns: 1fr;
+		padding: 20px 40px 5px 40px;
+		row-gap: 20px;
+	}
+
+	.highlights img {
+		filter: none;
+		border-radius: 20px;
+	}
+}
+
+@media (min-width: 1550px) {
+	.pictures {
+		grid-gap: 70px;
+	}
+}
+
+@media (min-width: 1800px) {
+	.pictures {
+		grid-gap: 90px;
+	}
+}
+
+
+
+/*FOOTER*/
+
+
+footer {
+	background-color: #404040;
+	height: fit-content;
+	padding: 10px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+
+footer .text {
+	padding: 0 100px;
+	display: inline-block;
+}
+
+footer p {
+	line-height: 15px;
+	font-family: Lato, Arial;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.getDirections {
+	margin-left: 20px;
+}
+
+.insta {
+    width: 45px;
+    float: right;
+    margin-left: auto;
+    padding-right: 100px;
+}
+
+.insta img{
+    width: 100%;
+    transition: transform 0.15s;
+}
+
+.credit {
+	position: absolute;
+	bottom: 1px;
+	left: 110px;
+	margin: 0;
+}
+
+.credit p {
+	margin: 0;
+	font-size: 11px;
+	opacity: 0.7;
+}
+
+footer a:hover {
+	color: #Fb4526;
+	font-weight: 300;
+	transition: 0.15s;
+}
+
+footer a:hover img {
+	transform: scale(1.25);
+}
+
+@media (max-width: 900px) {
+	footer .text {
+		padding: 0 50px;
+	}
+
+	.credit {
+		position: absolute;
+		bottom: 1px;
+		left: 60px;
+		margin: 0;
+	}
+
+	.insta {
+	    padding-right: 50px;
+	}
+
+	footer {
+		padding-top: 0px;
+	}
+
+}
+
+@media (max-width: 650px) {
+	.getDirections {
+		margin-left: 0;
+		white-space: nowrap;
+	}
+}
+
+@media (max-width: 550px) {
+	footer .text {
+		padding: 0 20px;
+	}
+
+	.insta {
+	    padding-right: 20px;
+	}
+
+	.credit {
+		position: absolute;
+		bottom: 1px;
+		left: 30px;
+		margin: 0;
+	}
+}
